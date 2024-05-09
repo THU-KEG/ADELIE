@@ -1,0 +1,15 @@
+{
+  "fewrel": 3880,
+  "tacred": 3905,
+  "ace2005-ner": 3915,
+  "ace2005-ed": 3879,
+  "MAVEN-ERE": 3309,
+  "conll-2003": 3886,
+  "maven-ed": 3913,
+  "RAMS-eae": 3907,
+  "ace2005-eae": 3914,
+  "ontonote5": 3902,
+  "openie4": 3893,
+  "maven-eae": 3874,
+  "ondemand": 3812
+}

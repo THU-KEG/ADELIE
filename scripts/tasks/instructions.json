@@ -1,0 +1,1428 @@
+{
+  "NER": [
+    [
+      "Recognize entities from the following sentence and classify the entity type into the options.\nOptions: [<options>]. ",
+      "NA"
+    ],
+    [
+      "Named Entity Recognition\n\n<options>\n\n<text>\n\nIf there are no entities in the text, please answer \"NA\".",
+      "NA"
+    ],
+    [
+      "Recognize entities from the following sentence and classify the entity type into the options.\n\nText: <text>\n\nOptions: <options>",
+      "There are no entities in the text."
+    ],
+    [
+      "Text: <text>\n\nThere may be some entities in the text, if any, please output these entities and the corresponding types. These types come from the options: <options>",
+      "There are no entities in the text."
+    ],
+    [
+      "For the given context \"<text>\", identify and classify the named entities into their corresponding categories: <options>.",
+      "There are no entities in the text that match the given entity category set."
+    ],
+    [
+      "Extract and label specific name entities belonging to <options>\n\nText: <text>",
+      "There are no entities in the text."
+    ],
+    [
+      "Analyze the sentence \"<text>\"  and recognize distinct categories <options>. If there are no entities in the text that match the given entity category set, answer \"None\"",
+      "None"
+    ],
+    [
+      "Extract and label specific name entities belonging to <options> from <text>.\n\n<options>\n<options>\n\n<text>\n<text>",
+      "The text contains no entities."
+    ],
+    [
+      "<text>\n\n<options>\n\nAnalyze the sentence and recognize entities belong to the given options. There may be no entities in the text, if not, output \"No entities\"",
+      "No entities."
+    ],
+    [
+      "Can we extract and label some entities from text \"<text>\"?\n\n<options>\n\n",
+      "No entities."
+    ],
+    [
+      "Is there are any entities in the following sentence?\n\n<text>\n\nIf any, extract and classify them into the category: <options>\n\n",
+      "NA"
+    ],
+    [
+      "Your task is to identify and extract the named entities from the following text:\n\n\"<text>\".\n\nPlease label the entities according to the following categories: <options>.\n\nIf no entities are found, please report the result as \"None\".",
+      "None"
+    ],
+    [
+      "Given the text:\n\n<text>\n\nPlease extract and classify the named entities according to the categories: <options>.\n\nIn case there are no entities present, respond with \"No entities found\".",
+      "No entities found"
+    ],
+    [
+      "Identify and extract any named entities in the following text: \"<text>\". Label each entity with the appropriate type from <options>. If no named entities are present in the given text, respond with \"No entities found\".",
+      "There are no named entities of type <options> in the given text."
+    ],
+    [
+      "Please extract all named entities and their respective types in the given text: \"<text>\". You can use <options> to determine the possible entity types. If there are no named entities, please output \"No entities found\".",
+      "There are no named entities in the given text."
+    ],
+    [
+      "Detect any named entities in the given sentence \"<text>\" and classify them according to <options> categories. If no entity is present, respond with \"There is no entity to extract\".",
+      "There are no entities of types <options> in the given sentence."
+    ],
+    [
+      "Extract all the named entities from the sentence \"<text>\" and categorize them <options>. Provide the extracted entities with their respective category. Else, respond with \"No named entities found\".",
+      "There are no entities to extract in the given text."
+    ],
+    [
+      "Identify and annotate the named entities in the given sentence \"<text>\" based on their categories in <options>. If there are no named entities, return \"No entities found\".",
+      "No named entities of type <options> were detected in the given sentence."
+    ],
+    [
+      "Perform Named Entity Recognition to extract entities of type <options> from the given text\n\nText: <text>\n\nIf no entities are identified, please indicate 'No entities found'.",
+      "There were no entities of type <options> identified in the text."
+    ],
+    [
+      "Could you please extract any named entities from the following sentence and classify them into categories based on the following options?\n\n Options: <options>\n\nText: <text>\n\nIn case there are no entities present in the text respond with 'No entities present'.",
+      "There are no named entities in the given sentence."
+    ],
+    [
+      "Identify all the <options> in the given text. If found, extract entities and provide their count",
+      "There are no <options> in the given text."
+    ],
+    [
+      "In the provided text, extract the named entities that belong to the category of <options>. If any, provide the names along with their category.",
+      "There are no named entities in the given text that belong to the specified category."
+    ],
+    [
+      "From the given text, extract all entities that match the type of <options>. Label them and provide the result.",
+      "No entities were found in the given text that match the type provided."
+    ],
+    [
+      "Analyze the following sentence and identify all entities belonging to the following types: <options>.\n\nSentence: <text>\n\nIf none of the entities match the given entity types, output \"None.\"",
+      "None."
+    ],
+    [
+      "Extract information from the sentence \"<text>\" and identify all entities that belong to the categories: <options>. If there are no entities in the sentence, output \"No entities found.\"",
+      "No entities found."
+    ],
+    [
+      "Classify the type of all entities in the following text: <text>. Label each entity as you classify them. Use the options to provide the type.\n\nOptions: <options>",
+      "There are no entities in the text."
+    ],
+    [
+      "Please extract and classify the named entities present in the given text: <text>. The categories of entities are: <options>. If there are no entities in the text, please output 'No entities found'.",
+      "No entities found."
+    ],
+    [
+      "Identify the named entities, if any, present in the following text: <text>. Categorize each entity into one of the following options: <options>. If no entities are found, indicate that with the output 'None found'.",
+      "None found."
+    ],
+    [
+      "Your task is to recognize the named entities in the following text: <text>. Classify each entity into one of the following categories: <options>. If there are no entities in the text, please return 'No entities detected'.",
+      "No entities detected."
+    ],
+    [
+      "Please examine the given text \"<text>\" and identify any named entities that belong to the following categories: <options>. If there are no entities within the text that match the specified categories, please respond with \"No entities found\".",
+      "No named entities were found within the given text."
+    ],
+    [
+      "Please analyze the given text \"<text>\" and extract all named entities that fall under <options> categories. If there are no entities that match the provided categories, please respond with \"No corresponding entities found within the text\".",
+      "No entities matching the specified categories were found in the text."
+    ]
+  ],
+  "RC": [
+    [
+      "Please classify relationships between the two entities (marked with <entity> and </entity>).\n If the two entities have no relationships, please answer NA.\n The set of relationships is as follows:[<options>]. ",
+      "NA"
+    ],
+    [
+      "Entity Relation Classification\n\n<options>\n\n<text>\n\nClassify the relation between <entity1> and <entity2> into the options.",
+      "The two entities do not have a relationship in options."
+    ],
+    [
+      "Read the given context \"<text>\", identify relationships between its different entities (marked with <head> and <tail>) and classify the relation into the categories: <options>.",
+      "I think there is no relationship between the given two entities."
+    ],
+    [
+      "Analyze the text in context and mention any relevant relationships that exist between markerd (with <entity>) individuals or objects or entities. If there is no relationship between the two entities, please output \"No relation\". Text: <text>\n\nOptions: <options>",
+      "No relation"
+    ],
+    [
+      "In the following sentence, there are two entities <entity1> and <entity2>.\n<text>\n\nPlease indentify and classify their relations into the predifined category set: <options>. If the two entities do not have a relationship in the category set, please answer \"NA\".",
+      "NA"
+    ],
+    [
+      "Extract and classify the relationship between the two mentioned entities in the text.\n<text>\n\n<options>",
+      "Sorry, there are no relations."
+    ],
+    [
+      "Can we extract relations between the two entities from the text?\n<text>\n\nIf any, classify the relation into the categories: <options>.",
+      "There is no relation expressed by the two entity in the text"
+    ],
+    [
+      "Consider the sentence: <text> and two entities <entity1>, <entity2>, label the relation between the two entities into <options>. If not, please answer \"No relation.\"",
+      "No relation"
+    ],
+    [
+      "Analyze the context and recognize any influential relationships that are either directly or indirectly mentioned in the provided content.\n\nContent: <text>\n\nOptions: <options>",
+      "Maybe there are no relations between the entities."
+    ],
+    [
+      "Generate the entity-relation triplet from the context. <text>.\n\nThe relations are from <options>",
+      "No relations"
+    ],
+    [
+      "<text>\n\n<options>\n\nGenerate the relation between the entities. Output \"No relationship\" if there is no relation.",
+      "No relationship."
+    ],
+    [
+      "Extract the relation between <entity1> and <entity2> from the following text: <text>. Classify the relation into one of the following options: <options>.",
+      "Unable to extract any relation between <entity1> and <entity2> from the text."
+    ],
+    [
+      "Given the following context: <text>. Identify the relations between entities and classify them into one of the following: <options>.",
+      "No entities or relations found in the text."
+    ],
+    [
+      "Given the text, \"<text>\", identify the relationship between <entity1> and <entity2>. Classify the relationship into one of the following categories: <options>.",
+      "After analyzing the text, I could not find any relationship between <entity1> and <entity2>."
+    ],
+    [
+      "Classify the relation between <entity1> and <entity2> in the given text: \n<text>\n\nChoose any of the following categories: <options>.",
+      "Sorry, I am unable to decide the relation between <entity1> and <entity2> in this text."
+    ],
+    [
+      "Find the entity pair with a relationship in the following text: \n<text>\nand choose the corresponding relationship from the set of categories: <options>.",
+      "No relation exists between any entity pair in the given text."
+    ],
+    [
+      "Carefully read and analyze the given paragraph \"<text>\" and identify if there is any relationship between two marked entities (<entity1> and <entity2>) or not. If there is a relationship, classify it into one of the following categories: <options>.",
+      "I'm sorry, there seems to be no obvious relationship between the given marked entities."
+    ],
+    [
+      "Identify the type of relationship between <entity1> and <entity2>, marked in the given text \"<text>\". Please classify it into one of the following categories: <options>.",
+      "I'm sorry, no relationship exists between the given entities in the provided text."
+    ],
+    [
+      "Review the following text and describe the relation between the two entities <entity1> and <entity2>: \n\n<text>\n\nChoose from the following relationship categories: <options>. If no relation is present, output \"No relation found\".",
+      "No relation found"
+    ],
+    [
+      "Identify and classify the relationship between <entity1> and <entity2> in the given text: \n\n<text>\n\nChoose one of the following types of relationship: <options>. If no relationship is found, write \"No relationship\".",
+      "No relationship"
+    ],
+    [
+      "Examine the given text: <text>, find the entity <entity1> and <entity2>. Can you detect the relation between these two? Choose from the following pre-defined categories: <options>. If there is no relation, mention it as \"Not related\".",
+      "Not related"
+    ],
+    [
+      "<entity1> and <entity2> are mentioned in the text: <text>. Can you identify and categorize their relation? Pick one from <options>. If there is no relationship, then write \"None found\" as the output. ",
+      "None found"
+    ],
+    [
+      "Examine the given paragraph: \n<text>\nCan you identify the relationship between the entities <entity1> and <entity2>? Please choose which of the following categories this relationship falls under: <options>. If there is no relationship present, then write \"No relationship\" as the output.",
+      "No relationship"
+    ],
+    [
+      "Examining the given text '<text>', can you identify any relationship between '<entity1>' and '<entity2>'? If there is a relationship, classify it into one of the categories: <options>",
+      "Unfortunately, there is no relationship mentioned in the given text between '<entity1>' and '<entity2>'."
+    ],
+    [
+      "Can you extract a relation between the entities '<entity1>' and '<entity2>' from the text '<text>'? If you can identify a relation, categorize it based on the following options available <options>.",
+      "After a thorough inspection, it is apparent that there is no relation between '<entity1>' and '<entity2>' in the given text."
+    ],
+    [
+      "Given the text \"<text>\", generate the relationships between <entity1> and <entity2>. The possible relationships may include <options>.",
+      "I am unable to generate any relationships from the provided text."
+    ],
+    [
+      "Analyze the provided content \"<text>\" and identify any conceivable connections between <entity1> and <entity2> and highlight the possible scenarios that these relationships may produce. Use the following options: <options>",
+      "No connections between <entity1> and <entity2> exist in the content."
+    ],
+    [
+      "Determine the subcategories of the type of relationship between <entity1> and <entity2> that are described in this provided text: \"<text>\". Use the following options: <options>",
+      "I am unable to find any subcategories of the relationship between <entity1> and <entity2>."
+    ],
+    [
+      "In the context of \"<text>\", can you identify and categorize any relationship between <entity1> and <entity2> from the following options: <options>?",
+      "I am sorry, there does not seem to be any relationship between <entity1> and <entity2> in the provided text."
+    ],
+    [
+      "Please read the following \"<text>\", identify and classify any connection between <entity1> and <entity2> from one of the following options: <options>.",
+      "There isn't any relationship evident between <entity1> and <entity2> in the said text."
+    ],
+    [
+      "Given the mentioned contexts \"<text>\", is there a relationship marked between entities <entity1> and <entity2>? If yes, please label the relation using one of the following categories <options>. If no relationship exists, please output: 'No relationship found.'",
+      "No relationship found."
+    ]
+  ],
+  "DocRC": [
+    [
+      "Please follow the above demonstration, extract relations from the [<text>]. Note the relation need to be in the predefined set of relations. the predefined set of relations: <options>.\n",
+      "NA"
+    ],
+    [
+      "Please help me classify potential relationships between entities (markerd with entity_ID) in <text>.\n\nRelationship types: <options>",
+      "There are no relations in the document."
+    ],
+    [
+      "This is a document-level relational classification task.\n\nDocument and entities tagged with entity_ID: <text>\n\nOptions: <options>",
+      "No relations in the document."
+    ],
+    [
+      "Given a document ``<text>`` and options ``<options>``, classify the relationship between any two distinct entities, where entities are marked with <entity_id>. If there are no relations in the document, please output \"NA\".",
+      "NA"
+    ],
+    [
+      "Please categorize the potential connections among entities in \"<text>\", based on the following relationship type options: <options>.",
+      "The document contains no relations."
+    ],
+    [
+      "Please extract relationships at document level. The text to analyze is: \"<text>\". Please select the appropriate option from the provided <options>.",
+      "In the document, there are no relations belong to the options"
+    ],
+    [
+      "Can you extract potential connections between mentions in documents? The mentions of the same entity are represented by the same id. \n<text>\n\n<options>. If the document contains no relations, please answer ``No relations in the document``.",
+      "No relations in the document"
+    ],
+    [
+      "Generate (entity, relation, entity) triplets from document, where entities are identified by <entity_id>. <text>.\n\n The relations are from <options>.",
+      "No relations"
+    ],
+    [
+      "Analyze possible relationships between markerd (with entity_ID) entities in a document. Text: <text>\n\nOptions: <options>",
+      "Sorry, there are no relationships."
+    ],
+    [
+      "Is there any relationships between entities in text?  Text: <text>\n\n If any, please extract relational triples. If not, please answer ``No relations''. Relationship types: <options>",
+      "No relations"
+    ],
+    [
+      "Please extract relations from the \"<text>\".\nNote the relation need to be in the predefined set of relations: ``<options>``.\nThe output format:(entity_ID, relation, entity_ID).\nThe predefined set of relations:\"<text>\"",
+      "No relations detected."
+    ],
+    [
+      "Could you please identify the entity mentioned in the \"<text>\" document? Use the following- <options>. If there is no entity mentioned in the text, please reply with \"None of the following\".",
+      "The document does not contain any of the following entities."
+    ],
+    [
+      "Please classify the text \"<text>\" according to the following categories - <options>. If none of these categories fit the text, please reply with \"None of the above\".",
+      "The text does not belong to any category above."
+    ],
+    [
+      "Please extract all the keywords and keyphrases from the \"<text>\" document. Use the following - <options>. If there are no keywords or keyphrases in the text, please reply with \"No keywords or keyphrases found\".",
+      "No keywords or keyphrases found."
+    ],
+    [
+      "Please extract entities from the text: <text> using the following options: <options>. The output should contain entity type, entity name and offset.",
+      "No entities detected in the text."
+    ],
+    [
+      "Identify any events mentioned in the text: <text>. Use the following list of options: <options>. If there are no events mentioned in the text, please reply with ``No events found``.",
+      "No events found."
+    ],
+    [
+      "Please identify the sentiment of the text: <text>. Use the following choices for sentiment options: <options>. If the text has no sentiment, please reply with ``Neutral``.",
+      "Could not identify the sentiment of the text."
+    ],
+    [
+      "Extract the <entity> mentioned in the text: <text>. Use the following options: <options>. If there is no entity in the text, write ``No entity found`` in the output.",
+      "No entity found."
+    ],
+    [
+      "Can you extract all possible <attribute> from the document? Note the attributes listed below. <options>.\n<text>\nIf no attribute found, please write ``no attribute found`` in the output.",
+      "No attribute found."
+    ],
+    [
+      "Please extract the time mentioned in the text: <text>. Note the following keywords: <options>. If no time is found in the text, reply with ``Time not mentioned`` in the output.",
+      "Time not mentioned."
+    ],
+    [
+      "Identify and classify entities from the text \"<text>\". Entity types: <options>.",
+      "No entities detected in the document."
+    ],
+    [
+      "Please provide an answer for the following question based on the text \"<text>\": <options>",
+      "I'm sorry, I couldn't find the answer to that question in the text."
+    ],
+    [
+      "Extract all named entities from the given text \"<text>\". Entity types: <options>.",
+      "No named entities detected in the document."
+    ],
+    [
+      "Can you extract the most frequently mentioned <options> in the text? Please list top 5 most frequently mentioned <options> in descending order.\n\n<text>. If no <options> are mentioned in the document, please answer ``No <options> in the document``.",
+      "No <options> in the document"
+    ],
+    [
+      "Please extract the <options> in the text \"<text>\".\nNote the <options> should be in the predefined set of <options>.\nThe output format: <options>.\nIf no <options> detected in the document, please output \"No <options> in the document\".",
+      "No <options> detected in the document."
+    ],
+    [
+      "Given a text snippet ``<text>``, identify the named entities within it and label them with their entity types using the following options: <options>. Output \"NA\" if no named entities are found.",
+      "NA"
+    ],
+    [
+      "Tag the <options> entities with their respective entity IDs in the following text snippet: <text>. If no entities of the given type are present in the text, output \"Null\".",
+      "Null"
+    ],
+    [
+      "Given a text passage ``<text>``, extract all the dates present in the passage that match the following patterns: <options>. If no dates are found, output \"Could not find any dates in the passage\".",
+      "Could not find any dates in the passage"
+    ],
+    [
+      "Identify the correct option from <options> that represents the topic of the given text: \"<text>\".",
+      "None of the options match the topic of the given text. Please try again."
+    ],
+    [
+      "Extract the entities mentioned in the given text: \"<text>\". Label them using entity_ID. Please choose the correct option from the following: <options>.",
+      "No entities detected in the text."
+    ],
+    [
+      "Please help me identify the sentiment of the given text \"<text>\". Please choose the option that best represents the sentiment: <options>.",
+      "Unable to identify the sentiment of the text."
+    ],
+    [
+      "Identify all the entities mentioned in the article <text>. Use the following named entity types: <options>. Return the list of entity names found in the article.",
+      "There are no named entities in the document."
+    ],
+    [
+      "Can you spot any potential sequencing among steps in the procedure mentioned in the text \"<text>\"? Use the following sequence types: <options>. If there are any such sequences, please return the ordered list of steps. Else, provide the output 'No sequence detected'.",
+      "No sequences detected."
+    ],
+    [
+      "Please identify the sentiment of the text \"<text>\" using the <options> sentiment analysis algorithm. Provide the sentiment score if possible, or else provide the output 'No sentiment detected'.",
+      "No sentiment detected."
+    ]
+  ],
+  "ED": [
+    [
+      "Please identify the events in the text and classify them into appropriate categories; The collection of categories is : <options>.\n",
+      "NA"
+    ],
+    [
+      "Event Detection\n\n<text>\n\n<options>\n\nIf there are no events in the text, output \"No events\".",
+      "No events."
+    ],
+    [
+      "Detect and extract event triggers and their types from \"<text>\". The event type set is <options>.",
+      "There are no events detected in the text."
+    ],
+    [
+      "Are there any events in the sentence?\n<text>\n\nPlease extract them and label the type from the category set.\n\n<options>",
+      "No events detected."
+    ],
+    [
+      "<options>\n\n<text>\n\nDo event detection. If there are any events, please figure them out. If not, output \"NA\".",
+      "NA"
+    ],
+    [
+      "Identify and classify the events detected from ``<text>`` into the predifined set.\n\n<options>",
+      "Sorry, there are no event triggers."
+    ],
+    [
+      "Consider the context ``<text>'' and <options>, output events.",
+      "NA"
+    ],
+    [
+      "Let's conduct event detection task, which aims to extract events and label them corresponding types from the options set.\n\n<sentence>: <text>\n\n<options>: <options>",
+      "No proper events in options are detected."
+    ],
+    [
+      "Can we extract some events from <text>?\n\n<text>: <text>\n\nThe types of events are <options>. If there are no proper events in options are detected, please output ``No events detected''.",
+      "No events detected."
+    ],
+    [
+      "Given an event type set: <options>, extract some events belong to set from the text.\n<text>",
+      "There are no events belong to the given set."
+    ],
+    [
+      "We want to extract event triggers from the following sentence, can you help me?\n<text>\n\nAnd classify the event into a type from ``<options>``.",
+      "Sorry, there are no events detected."
+    ],
+    [
+      "Given the context of <text> and the following <options>, provide a detailed summary of the events that took place.",
+      "Sorry, I am unable to generate a summary of the events."
+    ],
+    [
+      "Extract the key entities mentioned in \"<text>\" and provide the possible interpretations of their roles in the given context. Mention <options> to describe the role.",
+      "No entities were detected in the text."
+    ],
+    [
+      "Analyze the given <text> and detect the events that happened. Categorize the events into the following <options> and provide a summary of the events.",
+      "I could not detect any events in the given text."
+    ],
+    [
+      "Can you identify the method used to solve the problem described in the following text?\n<text>\nChoose the correct option from the following: <options>.",
+      "Sorry, we could not identify the method used to solve the problem."
+    ],
+    [
+      "Please paraphrase the following sentence:\n\n<text>\n\nTry to use different words and structure for the rephrased sentence.",
+      "Sorry, we could not identify a suitable paraphrase for the given sentence."
+    ],
+    [
+      "Given the following text, <options> and extract as many entities as you can. If there are no entities in the text, the output should be \"None\".\n\n<text>",
+      "None entities detected in the given text."
+    ],
+    [
+      "Identify the actions taking place in the given text.\n<text>\n\nIf there are any actions, list them out along with the actors involved. If not, output \"No actions found\".",
+      "No actions found."
+    ],
+    [
+      "Can you find any incidents mentioned in the given text?\n<text>\n\nIf you do, describe the nature of the incident(s) and any causative factors, if any.\n\n<options>",
+      "No incidents found."
+    ],
+    [
+      "Please summarize the given text in no more than 5 sentences.\n<text>\n\nEnsure that the summary covers all the key points in the original text.",
+      "Sorry, we could not generate a summary for the given text."
+    ],
+    [
+      "Identify the main event/trigger and its category in the given sentence: \"<text>\".\nRefer to the options for the category list.",
+      "No events detected in the sentence."
+    ],
+    [
+      "Extract the entities and events from the following sentence: \"<text>\". Check the options for the list of possible entities and events.",
+      "No entities or events found."
+    ],
+    [
+      "Categorize the events in the given sentence \"<text>\" based on their trigger words. Choose from the list of categories in <options>.",
+      "No events found in the given sentence."
+    ],
+    [
+      "Given the sentence ``<text>'', identify if there's any entity present. If so, extract and label the entities with type <options>.",
+      "No entities were detected in the given sentence."
+    ],
+    [
+      "From the given text, find and extract <options>. Make sure to retain the original structure and format of the text.",
+      "We could not extract any information based on the given input."
+    ],
+    [
+      "Consider the given paragraph for analysis: <text>. Based on this text, generate <options>.",
+      "NA"
+    ],
+    [
+      "Extract the entities mentioned in the given <text> and categorize them into <options>. ",
+      "No entities are detected in the text."
+    ],
+    [
+      "Identify any named entities in <text> and classify them into categories from <options>. ",
+      "No named entities are present in the text."
+    ],
+    [
+      "Can you detect any entities mentioned in <text> and name them with the corresponding categories defined in <options>? If no relevant entities are detected, mark the response as 'none'.",
+      "There are no entities found in the text."
+    ],
+    [
+      "Analyze \"<text>\" and extract any incidents that belong to <options>.",
+      "No incidents detected in the analysis."
+    ],
+    [
+      "Examine the given data and determine the <options> in the context of \"<text>\".\n\n If no <options> are present, output the message 'No <options> found.'.",
+      "No <options> were found in the given data."
+    ],
+    [
+      "Review \"<text>\" and identify if there are any major disruptions to <options>. If any disruptions are identified, describe them in detail.",
+      "There are no major disruptions to <options> in this context."
+    ],
+    [
+      "Identify all the persons mentioned in the text \"<text>\". Please label their roles from the given category set:\n<options>\n\nIf there are no persons mentioned, write 'No persons detected.'",
+      "No persons detected."
+    ],
+    [
+      "Analyze the text \"<text>\" and identify all the locations mentioned. Please tag them based on their type from the category set provided. \n<options>\n\nIf there are no locations mentioned, output the message 'No locations detected.'",
+      "No locations detected."
+    ],
+    [
+      "In the context of \"<text>\", identify the time and date mentioned in the text. Please label them with the format given. \n<options>\n\nIf no time and date is mentioned, print 'No date or time found in the text.'",
+      "No date or time found in the text."
+    ]
+  ],
+  "EAE": [
+    [
+      "Please extract event arguments and their roles for the events marked with <event> and </event> in the text, the possible roles must be chosen from the Roleset. If there is no roles for the event, place output'NA'.\n",
+      "NA"
+    ],
+    [
+      "Event Argument Extraction\n\n<text>\n\n<options>\n\nIf there are no roles for the given event, output \"No roles for the event\".",
+      "No roles for the event."
+    ],
+    [
+      "An event can have many roles, such as time, place, and entity. Please extract the roles for the marked event from sentence: ``<text>``. The role set is ``<options>``.",
+      "The event have no roles in the sentece."
+    ],
+    [
+      "Please extract the key information (<options>) for the given event.\n<text>. If there is no information about the event, answer ``NA``.",
+      "NA"
+    ],
+    [
+      "<text>\n\nWhat are the key components, such as <options>, of the given event (marked with <event>)?",
+      "There are no components about the event mentioned in the sentence."
+    ],
+    [
+      "Consider <options>, extract them for the given event {event} based on the context \"<text>\"",
+      "There are no related information for the event."
+    ],
+    [
+      "Your task is to obtain ``<options>`` for the event {event} from the sentence <text>. If there are no roles, answer ``No roles``.",
+      "No roles"
+    ],
+    [
+      "In the text ``<text>``, there is an event {event}. Please extract the roles or arguments for it. The role set: ``<options>''.",
+      "There are no mentioned roles or arguments for the event"
+    ],
+    [
+      "<text>\n\nOptions:<options>\n\nThe context contains a mentioned events and some arguments in options for the event, please extract them out.",
+      "Sorry, but there are no options detected."
+    ],
+    [
+      "<options>\n\nDoes the context ``<text>`` express some roles for the given event? If any, output them. If not, please answer \"There are no roles for the event\".",
+      "There are no roles for the event."
+    ],
+    [
+      "<options>\n\n<text>\n\nLet's do event argument extraction.",
+      "NA"
+    ],
+    [
+      "Identify and extract the roles of the event in the sentence - <text>. The possible roles include <options>.",
+      "Unable to identify any event from the given sentence."
+    ],
+    [
+      "Can you please extract <options> related to the event mentioned in the sentence - '<text>'? If no roles can be extracted, output 'No specific event related roles found' as the answer.",
+      "No specific event related roles found."
+    ],
+    [
+      "In the given sentence - '<text>', find and specify the different event arguments. Some possible arguments can be <options>. If no argument is found, output 'No event arguments can be identified in the given sentence'.",
+      "No event arguments can be identified in the given sentence."
+    ],
+    [
+      "Given the context \"<text>\", provide a list of potential <options>, if any. If there are no <options>, output \"There are no potential <options> mentioned.\".",
+      "There are no potential <options> mentioned."
+    ],
+    [
+      "Find the event mentioned in the sentence '<text>', and list down all possible <options> related to the event. If there are no relevant <options> found, mention \"Sorry, no <options> found for the event mentioned.\".",
+      "Sorry, no <options> found for the event mentioned."
+    ],
+    [
+      "What are the different types or categories of <options> that can be associated with the given event mentioned in the sentence '<text>'? Provide a detailed description of each category along with its example(s).",
+      "No event or context found in the given sentence."
+    ],
+    [
+      "Given the sentence \"<text>\", identify the words or phrases that related to the {event}. Pay attention to the context to avoid false positives. If there is no roles in the sentence, output \"No roles found\".",
+      "No roles found."
+    ],
+    [
+      "For the sentence \"<text>\", extract the '<options>' for the {event}. In case multiple events are present, extract '<options>' for the specified <event>. If they are not mentioned in the sentence, return \"No <options> found\" for the specified <event>.",
+      "No <options> found for the specified event."
+    ],
+    [
+      "<options>\n\n<text>\n\nPlease extract all the arguments for the given event mentioned in the above sentence.",
+      "There is no such event mentioned in the given text."
+    ],
+    [
+      "Identify all the event roles for the given trigger word - '<text>'. The possible roles are <options>. Please indicate the arguments separately.",
+      "Unable to identify any roles for the specified trigger word."
+    ],
+    [
+      "Can you please extract the possible event keywords from the following sentence - '<text>'? Some likely keywords could be <options>. If not possible, return the message 'No event keywords found in the given sentence.'",
+      "No event keywords found in the given sentence."
+    ],
+    [
+      "In the given text, find out the mention of <options>.\n<text>. If there is no mention of <options>, please provide ``NA`` as the output.",
+      "NA"
+    ],
+    [
+      "Please analyze the text below and extract the main theme that it conveys. Use <options> to describe the event. If no theme can be derived, please provide ``NA`` as the output.\n<text>.",
+      "The text does not have a discernible theme."
+    ],
+    [
+      "Extract the <options> related to the event mentioned in the following sentence: <text>. If there are no related <options>, answer with ``No related <options>``.",
+      "No related <options>"
+    ],
+    [
+      "Based on the context provided below, identify the entities that fit the criteria of <options>: <text>. If no entities fit the criteria, return ``No entities fit the criteria`` as output.",
+      "No entities fit the criteria"
+    ],
+    [
+      "Provide the <options> related to the given event in the following sentence: <text>. If there are no <options> related to the event, output ``There are no related <options>``.",
+      "There are no related <options>"
+    ]
+  ],
+  "ERE-Causal": [
+    [
+      "Please classify the causal relation from the first event to the second event in the following documents (marked with <Event> and </Event>). The set of causal relations is as follows: <options>. Don't consider any extra knowledge outside the given document. Don't make any complex inferences and only consider direct relations. Don't extend the meaning of an event to its surrounding words, but only consider the meaning of the specific words. ",
+      "NA"
+    ],
+    [
+      "Event Causal Relation Extraction\n\n<text>\n\n<options>\n\n",
+      "No causal relations."
+    ],
+    [
+      "Event Relation Extraction\n\n<text>\n\n<options>\n\n",
+      "No relations."
+    ],
+    [
+      "Relation Extraction\n\n<text>\n\n<options>\n\n",
+      "No relations."
+    ],
+    [
+      "Entity Relation Extraction\n\n<text>\n\n<options>\n\n",
+      "No relations."
+    ],
+    [
+      "Please identify causal relations between events mentioned in the document ``<text>``\n\n<options>",
+      "There are no relations in the document"
+    ],
+    [
+      "Are there any causal relationships in the sentence?\n<text>\n\n<options>\n\nIf not, output ``NA''.",
+      "NA"
+    ],
+    [
+      "Does the following document contain some cause-and-effect relationships in the text \"<text>\"?\n\noptions: <options>.",
+      "There are no relations."
+    ],
+    [
+      "Given ``<text>``, please recognize causal relations and classify into <options>. If there are no relations belonging to the options, output ``None''.",
+      "None"
+    ],
+    [
+      "Read the given context \"<text>\", identify relationships between its different events (marked with <head> and <tail>) and classify the relation into the categories: <options>.",
+      "I think there is no relationship between the given two events."
+    ],
+    [
+      "Extract and classify the relationship between the two mentioned entities (<event1> and <event2>) in the text.\n<text>\n\n<options>",
+      "Sorry, there are no relations."
+    ],
+    [
+      "Identify the cause and effect relationship between the events marked with <head> and <tail> in the given context: <text>. Categorize the relation under <options>.",
+      "Cannot identify any causal relationship between the two events."
+    ],
+    [
+      "Find and differentiate the causes and effects in the text: <text>. You can use <options> to classify each causal relationship. ",
+      "Unable to identify any causes or effects in the text."
+    ],
+    [
+      "Determine the causal relationship between <event1> and <event2> in the given context: <text>. Classify the causal relation into appropriate <options>.",
+      "The two events seem to be independent of each other with no detectable cause-effect relationship."
+    ],
+    [
+      "Identify the entities involved in the given events: <text>. Classify the entity pairs based on <options>.",
+      "No entities found."
+    ],
+    [
+      "Given the context <text>, generate a causal explanation using the events listed here: <options>. Use the past tense while explaining.",
+      "Cannot generate a causal explanation for the given events."
+    ],
+    [
+      "Determine the relationship between the given entities and events in the context: <text>. Use <options> to describe the relation.",
+      "No relationship identified."
+    ],
+    [
+      "Analyze the following text to identify the events marked by <head> <text>, and <tail> <text>. Determine the causal relationship between them from the options: <options>.",
+      "No causal relationship found."
+    ],
+    [
+      "Examine the given context \"<text>\" and identify the casual relationship between events. Provide the relation category from the available <options>. ",
+      "No causal relations were found in the given context."
+    ],
+    [
+      "What is the causal relationship between the events in: <text>? Choose from the given options: <options>",
+      "Cannot determine a casual relationship between the given events."
+    ],
+    [
+      "Identify the event(s) that <text>. Use the given <options> to classify the type of event(s).",
+      "There are no events detected."
+    ],
+    [
+      "Determine if there is any correlation between <x> and <y>, based on the text: <text>. Provide one plausible explanation of the correlation if any, following the given <options>.",
+      "There seems to be no correlation between <x> and <y>."
+    ],
+    [
+      "Given the text: <text>, identify the effects of <cause> and classify them as either <options>. If there are no effects of <cause>, your output should be ``None''. ",
+      "No effects are detected for <cause>."
+    ],
+    [
+      "Analyze the text \"<text>\" and identify some causal relationships between its different events (marked with <effect> and <cause>) and categorize the relations into <options>.",
+      "I cannot find any causal relationship between the given events."
+    ],
+    [
+      "Given the input text \"<text>\", identify the causes of <effect> described in the text and categorize them as either <options>. If there are no causes found, your output should be ``Unknown''.",
+      "I could not detect any causes for <effect>."
+    ],
+    [
+      "Identify the effects of <cause> in the given text \"<text>\" and classify them into <options>. If there are no effects of <cause>, your output should be ``None''.",
+      "No effects are found for <cause>."
+    ],
+    [
+      "Identify whether there is a causal relationship between two events in the following sentence:\n<text>\n\nIf there is, classify the relationship as <options>, otherwise output ``No causal relationship found''.",
+      "No causal relationship found."
+    ],
+    [
+      "Please analyze the given text and identify any causal relationships present. Classify the relationships as <options>. If no causal relationships are found, output ``None''.",
+      "None"
+    ],
+    [
+      "Read the text and determine if any two events are causally related. If so, classify the relationship as <options>. If not, output ``No causal relationship found''\n\n<text>",
+      "No causal relationship found."
+    ],
+    [
+      "Can you identify cause and effect relationships in the given text \"<text>\"? If yes, extract and provide the relation between them.\n\n<options>.",
+      "No cause-and-effect relationships were found in the text."
+    ],
+    [
+      "Given the text ``<text>``, identify any instances of causation and indicate the cause and effect.\n\n<options>",
+      "No causal relationships found in the text."
+    ],
+    [
+      "Determine if there are any causative relationships present in the text ``<text>``. If there are, describe the relationship in terms of <options>.",
+      "There are no causal relationships in the text."
+    ],
+    [
+      "Can you find any instances where one event caused another in the text ``<text>``? If so, please indicate which events are involved in the relationship and the direction of causality.\n\n<options>",
+      "No causal relationship found in the text."
+    ]
+  ],
+  "ERE-Temporal": [
+    [
+      "Please classify the temporal relation from the first event to the second event in the following documents (marked with <Event> and </Event>). The set of temporal relations is as follows: <options>. Don't consider any extra knowledge outside the given document. Don't make any complex inferences and only consider direct relations. Don't extend the meaning of an event to its surrounding words, but only consider the meaning of the specific words. ",
+      "NA"
+    ],
+    [
+      "Event Temporal Relation Extraction\n\n<text>\n\n<options>",
+      "There are no temporal relations."
+    ],
+    [
+      "Event Relation Extraction\n\n<text>\n\n<options>\n\n",
+      "No relations."
+    ],
+    [
+      "Relation Extraction\n\n<text>\n\n<options>\n\n",
+      "No relations."
+    ],
+    [
+      "Are there any temporal relations in the context ``<text>''?\n\n<options>\n\nIf not, output ``No temporal relations detected.''",
+      "No temporal relations detected."
+    ],
+    [
+      "<text>\n\nDoes there exist temporal relationship between the events <event1> and <event2>?\n\n<options>",
+      "No, there doesn't."
+    ],
+    [
+      "Please extract the temporal relations from \"<text>\" and classify them into ``<options>''.",
+      "No relations."
+    ],
+    [
+      "Analyze the context ``<text>``, and output the temporal relations between <event1> and <event2>.\n\nOptions: <options>\n\nIf there is no temporal relation between the two events, answer \"Sorry, there are no temporal relations.\"",
+      "Sorry, there are no temporal relations."
+    ],
+    [
+      "Can we extract relations between the two events from the text?\n<text>\n\nIf any, classify the relation into the categories: <options>.",
+      "There is no relation expressed by the two events in the text"
+    ],
+    [
+      "Consider the sentence: <text> and two entities <event1>, <event2>, label the relation between the two entities into <options>. If not, please answer \"No relation.\"",
+      "No relation"
+    ],
+    [
+      "Identify if there is any temporal relationship between the events \"<event1>\" and \"<event2>\" mentioned in the text.\nClassify the relationship into the following categories: <options>.",
+      "No temporal relationship could be identified between <event1> and <event2>."
+    ],
+    [
+      "Can you extract any temporal relationship between the events \"<event1>\" and \"<event2>\"? Please categorize the relationship into the following categories: <options>.",
+      "No temporal relationship could be extracted between <event1> and <event2>."
+    ],
+    [
+      "Extract the temporal relations, if any, between the events \"<event1>\" and \"<event2>\" mentioned in the text.\nPlease categorize the relationship into the following categories: <options>.",
+      "There is no temporal relationship between <event1> and <event2> in the text."
+    ],
+    [
+      "Extract temporal information between the two events <event1> and <event2> from the text: \"<text>\" \n\nIf there is no temporal information between these events, please output the following failed output: \"<failed_output>\"",
+      "Unfortunately, no temporal information could be extracted between the events <event1> and <event2>."
+    ],
+    [
+      "Provide a summary of the temporal relation between the events <event1> and <event2> in the text: \"<text>\". \n\nYour answer should include the relation type and any temporal indicators. \n\nIf no temporal relation exists, provide the following failed output: \"<failed_output>\"",
+      "Sorry, there is no temporal relation between the events <event1> and <event2> in the provided text."
+    ],
+    [
+      "Examine the sentence, \"<text>\" and identify any temporal relationship between entities \"<event1>\" and \"<event2>\". Please classify the relationship using the following categories: <options>. If there is no temporal relationship, answer with \"No temporal relationship found.\"",
+      "There is no temporal relationship between \"<event1>\" and \"<event2>\"."
+    ],
+    [
+      "<text>\n\nFind the temporal sequence of the two events, \"<event1>\" and \"<event2>\". Choose the correct two options from <options>. If there is no temporal relationship, then write \"No sequence between events <event1> and <event2>\"",
+      "No sequence found between events \"<event1>\" and \"<event2>\"."
+    ],
+    [
+      "Given the sentence: <text>, identify the <options> that best describe the relationship between the entities <entity1> and <entity2>.",
+      "There is no relationship between <entity1> and <entity2>."
+    ],
+    [
+      "Below is a sentence, please match the pairs of entities that have the <options> relationship and write it down as a list: <text>. If none of the entities have the mentioned relationship, write \"No relations found\".",
+      "No matching pairs with the <options> relation found in the given sentence."
+    ],
+    [
+      "Can you determine the <options> relationships among the entities mentioned in the following sentence: <text>? If there is no relationship, please write \"No relation found\".",
+      "None of the entities in the given sentence have the <options> relation."
+    ],
+    [
+      "Read the following sentence: <text> and infer the temporal relationship between <event1> and <event2>. Determine if the relationship is classified as <options>. If no such relation exists, output \"Cannot determine temporal relationship\".",
+      "Cannot determine temporal relationship"
+    ],
+    [
+      "Based on the surrounding context of <text>, what is the temporal relationship between <event1> and <event2>? If there is a temporal relationship, classify it as one of the following categories: <options>. If there is no temporal relationship, output \"No temporal relationship found\".",
+      "No temporal relationship found"
+    ],
+    [
+      "Extract the temporal relations between <event1> and <event2> in the following text: \"<text>\". Use <options> to classify the relations.",
+      "No temporal relation found between <event1> and <event2>."
+    ],
+    [
+      "Can you identify the temporal relationship between <event1> and <event2> in the given text? \n<text>\nChoose the answer that corresponds to the correct temporal relationship from the following options: <options>. If no temporal relationship exists between the two events, indicate it by writing ``<event1> and <event2> are independent.''",
+      "<event1> and <event2> are independent."
+    ],
+    [
+      "Identify the event that is the most recent among the following events:\n<text>\nSelect the most recent event from the given options: <options>.",
+      "Sorry, I am not able to identify the most recent event among the given options."
+    ],
+    [
+      "From the given set of events that occurred in the past, can you arrange them in chronological order?\n<text>\nArrange the given events in chronological order, starting from the earliest event first.",
+      "Sorry, I cannot arrange these events in chronological order."
+    ],
+    [
+      "Can you identify the event that is most distant in time from the event <event> in the given text?\n<text>\nSelect the event which is most distant in time from <event> from the given options: <options>.",
+      "Sorry, I cannot identify the event that is most distant in time from <event>."
+    ]
+  ],
+  "ERE-Subevent": [
+    [
+      "Please classify the subevent relation from the first event to the second event in the following documents (marked with <Event> and </Event>). The set of subevent relations is as follows: <options>. Don't consider any extra knowledge outside the given document. Don't make any complex inferences and only consider direct relations. Don't extend the meaning of an event to its surrounding words, but only consider the meaning of the specific words. ",
+      "NA"
+    ],
+    [
+      "Event Subevent Relation Extraction\n\n<text>\n\n<options>.",
+      "There are no subevent relations"
+    ],
+    [
+      "Event Relation Extraction\n\n<text>\n\n<options>\n\n",
+      "No relations."
+    ],
+    [
+      "Relation Extraction\n\n<text>\n\n<options>\n\n",
+      "No relations."
+    ],
+    [
+      "<text>\n\nDoes <event1> is the subevent of <event2>? Or the opposite? If these doesn't exist subevent relations, answer ``No subevent relations``.",
+      "No subevent relations."
+    ],
+    [
+      "Please recognize the potential subordination relationship bwtween the two marked entities (<event1> and <event2>).",
+      "No relations detected."
+    ],
+    [
+      "What is the relationship between the mentioned events (<event1> and <event2>) in the document?\n\n<options>",
+      "There are no relations between the events"
+    ],
+    [
+      "Given ``<text>``, output the possible relations bwteen the events. The events are <event1> and <event2>. If there are no relations, output ``None``.",
+      "None"
+    ],
+    [
+      "Analyze the context and recognize any influential relationships that are either directly or indirectly mentioned in the provided content.\n\nContent: <text>\n\nOptions: <options>",
+      "Maybe there are no relations between the entities."
+    ],
+    [
+      "<text>\n\n<options>\n\nGenerate the relation between the entities (<event1> and <event2>). Output \"No relationship\" if there is no relation.",
+      "No relationship."
+    ],
+    [
+      "Given the <event1> and <event2> events that make up <text>, identify if <event1> is a subevent of <event2>. If so, state what type of subevent relation exists. If there are no subevent relations, output \"No subevent relations\".",
+      "No subevent relations"
+    ],
+    [
+      "<text>\nProvide a relation between <event1> and <event2>. If <event1> <verb1> <event2>, then what would be the relation? If there are no discernable relationships between the events, output \"No relationship found\".",
+      "No relationship found"
+    ],
+    [
+      "Identify the subevent related to the event described in the following sentence: '<text>'\n\nOptions: <options>\n",
+      "No subevent related to the given sentence is identified."
+    ],
+    [
+      "Determine the relationship between <event1> and <event2> with respect to their occurrence.\n\nOptions: <options>\n",
+      "No relationship could be determined between the given events."
+    ],
+    [
+      "Please extract the subevent for the given event '<text>'\n\nOptions: <options>\n",
+      "No subevent could be extracted for the given event."
+    ],
+    [
+      "Identify the relationship between the following events in ``<text>``. The events are <event1>, <event2>, and <event3>. Output the type of relation between the events. Use the options below to identify the relation.\n\n<options>. If no relation exists, output ``None``.",
+      "None"
+    ],
+    [
+      "Examine the events <event1> and <event2> related to ``<text>``. Output a sentence explaining if <event1> is preceded, followed or alternatives to <event2>. If there is no preceding, following or alternative event for <event2>, output ``No alternative events``. ",
+      "No alternative events"
+    ],
+    [
+      "Identify the '<text>' event and list its possible sub-events from the following options: <options>. If there are no sub-events, respond with `no sub-events identified`.",
+      "No sub-events identified."
+    ],
+    [
+      "Given the sentence '<text>', identify whether <event1> is a sub-event of <event2>. If negative, identify the possible sub-events of <event1> with respect to <event2>.",
+      "No subevents identified."
+    ],
+    [
+      "List all possible sub-events of event '<text>' from the following options: <options>. If there are no sub-events identified, respond with `no sub-events`.",
+      "No sub-events identified."
+    ],
+    [
+      "From the given text `<text>`, identify the possible sub-events related to the event `<event>`. Choose from the following options: <options>. If there are no sub-events identified, respond with 'N/A'.",
+      "There are no sub-events related to the event."
+    ],
+    [
+      "Please extract the sub-events from the sentence - `<text>` that are related to the event `<event>`. Select from the following options: <options>. Output `none` if no sub-events are found.",
+      "There are no sub-events related to the event."
+    ],
+    [
+      "Can you identify the sub-events in the document related to the event '<event>' from the given options: <options>? If there are no sub events associated with the event, respond with 'None'.",
+      "No sub events were associated with the given event."
+    ],
+    [
+      "Given the text '<text>', identify and provide the subevent associated with the event in the sentence.\n\nOptions: <options>\n\nInclude the list of the entities participating in the event and their roles.",
+      "Unable to identify any subevent associated with the given sentence."
+    ],
+    [
+      "Based on the given context, provide information about the related subevent to the given event ('<text>').\n\nOptions: <options>\n\nIf no related subevents are identified, output 'No related subevents found.'",
+      "Unable to identify any related subevents for the given event."
+    ],
+    [
+      "Provide the subevent related to the context from the following sentence: '<text>'.\n\nOptions: <options>\n\nProvide the participating entities and their roles.",
+      "No subevent related to the given sentence is identified."
+    ],
+    [
+      "Analyze the relationship between <event1> and <event2> based on their sequence in the given text. If there is no sequence mentioned, respond with 'No sequence mentioned'.",
+      "No sequence mentioned."
+    ],
+    [
+      "Given the sentence '<text>', identify the sub-event of <event1> that leads to <event2>. If there are no identified sub-events, respond with 'No sub-events identified'.",
+      "No sub-events identified."
+    ],
+    [
+      "Find the intermediary event/step between <event1> and <event2> in the given <text>. Provide the name of the intermediary event/step. If there is no intermediary event/step, respond with 'No intermediary event/step found'.",
+      "No intermediary event/step found."
+    ],
+    [
+      "Identify any sub-events that occurred during or after <text>. Provide a description of the sub-events identified.\n\nOptions: <options>",
+      "No sub-events were identified."
+    ],
+    [
+      "Using the given context, identify any sub-events that may have occurred either directly or indirectly related to <text>. Provide a brief description of the sub-events identified.\n\nOptions: <options>",
+      "No sub-events could be identified."
+    ],
+    [
+      "Determine if <text> is part of any larger or smaller sub-events. If so, briefly describe the identified sub-events.\n\nOptions: <options>",
+      "No sub-events were detected."
+    ]
+  ],
+  "ERE-Coref": [
+    [
+      "Please classify the Coreference relation from the first event to the second event in the following documents (marked with <Event> and </Event>). The set of Coreference relations is as follows: <options>. Don't consider any extra knowledge outside the given document. Don't make any complex inferences and only consider direct relations. Don't extend the meaning of an event to its surrounding words, but only consider the meaning of the specific words. ",
+      "NA"
+    ],
+    [
+      "Event Coreference Relation Extraction\n\n<text>\n\n<options>.",
+      "No coreference relations."
+    ],
+    [
+      "Event Relation Extraction\n\n<text>\n\n<options>\n\n",
+      "No relations."
+    ],
+    [
+      "Relation Extraction\n\n<text>\n\n<options>\n\n",
+      "No relations."
+    ],
+    [
+      "Does <event1> and <event2> mean the same event in \"<text>\"?",
+      "No, they are not same."
+    ],
+    [
+      "Given the context ``<text>``, does the events <event1> and <event2> have the same meaning?",
+      "No, they have different meanings."
+    ],
+    [
+      "Here is the text: <text>\n\nAre the events <event1> and <event2> the same? If not, please output ``They are not the same.``",
+      "They are not the same."
+    ],
+    [
+      "<text>\n\nAre the events <event1> and <event2> the same event? If no, output \"No coreference relations.\"",
+      "No coreference relations"
+    ],
+    [
+      "In the following document, there are two entities <event1> and <event2>.\n<text>\n\nPlease indentify and classify their relations into the predifined category set: <options>. If the two entities do not have a relationship in the category set, please answer \"NA\".",
+      "NA"
+    ],
+    [
+      "Please read the following text and identify the entity mentioned with the pronoun \"<pronoun>\".\n<text>\n\nWhat is the entity that \"<pronoun>\" refers to?",
+      "I'm sorry, I cannot identify the entity that \"<pronoun>\" refers to."
+    ],
+    [
+      "Given the text below, can you identify the location described in the sentence \"<sentence>\"?\n<text>\n",
+      "I cannot identify the location described in the sentence \"<sentence>\"."
+    ],
+    [
+      "In the following paragraph, determine the role of the entity \"<entity>\".\n<text>\n\nWhat role does the entity \"<entity>\" play in the paragraph?",
+      "I'm sorry, I cannot determine the role of the entity \"<entity>\"."
+    ],
+    [
+      "Can you extract entities mentioned in the following text?\n<text>\nPlease output all of the recognized entities and their corresponding context. If there are no entities, please output \"No entities found.\"",
+      "No entities found."
+    ],
+    [
+      "Here is a piece of text:\n<text>\nDo the two mentions of the entity <entity> refer to the same thing or two separate things? If they refer to the same thing, please output \"The two mentions of <entity> refer to the same thing.\" Otherwise, please output \"The two mentions of <entity> refer to different things.\"",
+      "The two mentions of <entity> cannot be compared."
+    ],
+    [
+      "Identify <entity> in the following sentence: \"<text>\". If <entity> is not present, output \"Entity not found.\"",
+      "Entity not found."
+    ],
+    [
+      "In the given text, find mentions of <event> and <entity>. If <event> and <entity> are not found together, output \"No co-reference relations.\". Otherwise, output the coreference relation.",
+      "No co-reference relations."
+    ],
+    [
+      "Determine if the entities <entity1> and <entity2> refer to the same entity in the following sentence: \"<text>\". If not, output \"Entities do not have the same referent.\".",
+      "Entities do not have the same referent."
+    ],
+    [
+      "Referencing <text>, can you identify any pronouns that are referring to the entity named '<entity>' and replace them with the name of the entity? Please output the updated text.",
+      "Could not identify any pronouns."
+    ],
+    [
+      "Given the text: <text>\n\nCan you identify any synonymous terms for '<term>' mentioned in the text? If yes, please output all of the synonymous terms.",
+      "No synonyms found."
+    ],
+    [
+      "Can you extract the temporal expressions from the following text: <text>?\nPlease output all of the extracted temporal expressions and their corresponding context. If no temporal expressions are present in the text, please output 'No expressions found.'",
+      "No expressions found."
+    ],
+    [
+      "Identify the mentioned entities in the given text. If there are references to the same entity, replace all of them with the same string representation. Re-write the text with entity mentions being replaced by their corresponding string representations.",
+      "No entities were identified in the given text."
+    ],
+    [
+      "The given text contains mentions of <event_1> and <event_2>. Please identify whether there is any co-reference relation between these events. In case, they are not co-referent, output \"No co-reference relation exists between the two events.\"",
+      "The events mentioned are co-referential."
+    ],
+    [
+      "Identify all the relations between entities in the given text.\n<text>\nCategorize the relations into the following categories: <options>. If there are no relations in the given text, output \"No relations found\".",
+      "No relations found."
+    ],
+    [
+      "Find all the pronoun mentions in the following text and replace them with their corresponding entity mentions.\n<text>\nIf there are pronouns that cannot be successfully resolved or replaced, output \"Error: Unresolved pronoun mentions\".",
+      "Error: Unresolved pronoun mentions."
+    ],
+    [
+      "The following text consists of multiple events. \n<text>\n\nIdentify the events and their corresponding attributes: <options>. If there are events that cannot be identified or attributes that cannot be extracted, output \"Error: Failed to extract all events and attributes\".",
+      "Error: Failed to extract all events and attributes."
+    ],
+    [
+      "Considering the context - <text>, are the entities <entity1> and <entity2> coreferent with each other?",
+      "No, they are not coreferent."
+    ],
+    [
+      "Given <text>, please identify the entity which <entity_description>. If the entity is not present in the mentioned text, please output 'Entity not found'.",
+      "Entity not found."
+    ],
+    [
+      "Detect the relation between the two entities- <entity1> and <entity2> mentioned in the context - <text>. The relation should be from the following set of options - <options>. If no relation is found, please output 'No relation found'.",
+      "No relation found."
+    ],
+    [
+      "Can you annotate the coreference mentions in the following text: <text>? Please mark the coreferent mentions with the same label. ",
+      "The provided text has no coreferent mentions."
+    ],
+    [
+      "Given the text <text>, can you identify all named entities? Please indicate the entity type (e.g. Person, Location, Organization) for each named entity. If there are no named entities present in the text, please output 'No named entities found.'",
+      "No named entities found."
+    ],
+    [
+      "In the following passage, there are some pronouns that refer to a previous entity. Can you label each pronoun with the entity it refers to?\n<text>",
+      "There are no pronouns referring to a previous entity found in the provided passage."
+    ]
+  ],
+  "SC-SST5": [
+    [
+      "Please comprehend emotions expressed from the given text. The set of emotions is as follows: <options>\n"
+    ],
+    [
+      "Review:\n<text>\nIs this movie review sentence negative or positive?\n<options>"
+    ],
+    [
+      "Short movie review: <text>\nDid the critic thinking positively or negatively of the movie?\n<options>"
+    ],
+    [
+      "Sentence from a movie review: <text>\nWas the movie seen positively or negatively based on the preceding review?\n\n<options>"
+    ],
+    [
+      "\"<text>\"\nHow would the sentiment of this sentence be perceived?\n\n<options>"
+    ],
+    [
+      "Is the sentiment of the following sentence positive or negative?\n<text>\n<options>"
+    ],
+    [
+      "What is the sentiment of the following movie review sentence?\n<text>\n<options>"
+    ],
+    [
+      "Would the following phrase be considered positive or negative?\n\n<text>\n<options>"
+    ],
+    [
+      "Does the following review have a positive or negative opinion of the movie?\n\n<text>\n<options>"
+    ],
+    [
+      "Please identify the sentiment of the text.\n<text>\n\n<options>"
+    ],
+    [
+      "Given a sentiment set: <options>, classify the sentiment expressed in the sentence ``<text>`` into the set."
+    ],
+    [
+      "Based on the context: <text>\nWhat would be the appropriate emotion category for the sentence?\n\n<options>"
+    ],
+    [
+      "The sentence: <text>\nIs this an example of positive or negative sentiment as per the options: <options>"
+    ],
+    [
+      "From the following text, choose the sentiment category that best describes the feeling conveyed by the sentence: <text>\n\n The sentiment categories are as follows: <options>"
+    ],
+    [
+      "Read the following sentence and select the sentiment it conveys:\n\n<text>\n\nOptions: <options>\n"
+    ],
+    [
+      "Analyze the text below and choose the appropriate sentiment:\n\n<text>\n\nChoose one of the following: <options>\n"
+    ],
+    [
+      "Here is a sentence:\n\n<text>\n\nDetermine the sentiment of this sentence and choose from the options below:\n\n<options>\n"
+    ],
+    [
+      "Based on the sentiment set: <options>, determine whether the following statement is expressing a positive or negative sentiment: <text>"
+    ],
+    [
+      "What sentiment is being conveyed in the following sentence? <text>\n\nPlease select the appropriate sentiment category from: <options>"
+    ],
+    [
+      "Select the most accurate sentiment category that describes the following statement: <text>\n\nChoose from the sentiment set provided: <options>"
+    ],
+    [
+      "What is the sentiment of the given statement?\n<text>\nChoose one of the options given below:\n<options>"
+    ],
+    [
+      "Please classify the sentiment of the following statement:\n<text>\nDo you think this statement is positive or negative?\n<options>"
+    ],
+    [
+      "Please read the following sentence and categorize its sentiment as one of the following:\n<text>\nChoose one: <options>"
+    ],
+    [
+      "Analyze the sentiment of this statement:\n<text>\nDoes it convey a positive, negative or neutral sentiment?\n<options>"
+    ],
+    [
+      "Determine the emotional tone of the following phrase:\n<text>\nWhich category does it belong to: positive, negative or neutral?\n<options>"
+    ],
+    [
+      "Identify the sentiment of the given text:\n<text>\nChoose from the following alternatives for the tone: <options>"
+    ],
+    [
+      "Evaluate the sentiment of the following statement:\n<text>\nSelect the most appropriate option from the sentiment set: <options>."
+    ],
+    [
+      "Decipher the sentiment depicted in the given sentence:\n<text>\nChoose the option from the set of sentiments that best describes the sentiment expressed: <options>."
+    ],
+    [
+      "Assess the sentiment in the following statement:\n<text>\nPick the correct option from these sentiments - <options>."
+    ],
+    [
+      "Read the following sentence: \"<text>\"\nBased on the sentiment expressed, classify it into one of the following categories: <options>"
+    ],
+    [
+      "Assess the sentiment of the following statement: <text>\nIs the sentiment expressed positive or negative? Choose the appropriate option from: <options>"
+    ],
+    [
+      "Analyze the sentiment of the given review: <text>\nSelect from the following options to label the sentiment expressed: <options>"
+    ],
+    [
+      "Movie review snippet: <text>\nWhat was the overall tone of the review, positive or negative?\n<options>"
+    ],
+    [
+      "Identify the sentiment expressed in the following quote: <text>\nCan it be classified as positive or negative?\n<options>"
+    ],
+    [
+      "Read the following statement and classify its sentiment as expressed using <options>: <text>"
+    ]
+  ],
+  "SC-GoEmo": [
+    [
+      "Please comprehend emotions expressed from the given text. The set of emotions is as follows: <options>\n"
+    ],
+    [
+      "Sentiment Classification\n\n<text>\n\n<options>"
+    ],
+    [
+      "What are the sentiment or emotion expressed in the sentence \"<text>\"?\n<options>"
+    ],
+    [
+      "Given the emotion set ``<options>``, which one is contained in the sentence \"<text>\"?"
+    ],
+    [
+      "Please select a proper sentiment for the ``<text>`` from ``<options>``."
+    ],
+    [
+      "The sentence \"<text>\" expresses a form of sentiment, which is it?\n<options>"
+    ],
+    [
+      "Would the text positive, negative, or natural?\n\n<text>\n\n<options>"
+    ],
+    [
+      "Given a phrase ``<text>``, please identify the emotion expressed. The options is: <options>."
+    ],
+    [
+      "Sentiment review: <text>\nChoose the most suitable sentiment from \"<options>\""
+    ],
+    [
+      "Is there an emotion expressed in the phrase ``<text>``?\n\n<options>"
+    ],
+    [
+      "Options: <options>\n\nClassify the sentiment into the options for the sentence \"<text>\"."
+    ],
+    [
+      "Using the following <options>, determine the emotion being conveyed in the statement: \"<text>\"."
+    ],
+    [
+      "Indicate the emotion behind the statement \"<text>\" using any of the provided <options>."
+    ],
+    [
+      "Choose the emotion best associated with the text \"<text>\" from the given <options>."
+    ],
+    [
+      "Identify the sentiment conveyed in the phrase \"<text>\". Select from the following emotions: <options>"
+    ],
+    [
+      "Categorize the tone used in the sentence \"<text>\". Which one of these best describes it: <options>"
+    ],
+    [
+      "Classify the sentiment or emotion displayed in the statement \"<text>\". Please select the appropriate category from the following options: <options>"
+    ],
+    [
+      "Select the word that best describes the sentiment in the following sentence: \"<text>\". Your options are <options>."
+    ],
+    [
+      "Which of the following emotions can be inferred from the following sentence: \"<text>\"? Choose from <options>."
+    ],
+    [
+      "Please identify the sentiment expressed in the text \"<text>\". You can choose from the following options: <options>."
+    ],
+    [
+      "Identify the sentiment of the following statement: \"<text>\". Choose from the following options: <options>."
+    ],
+    [
+      "What is the overall emotion conveyed in this statement? \"<text>\". Select the correct option from <options>."
+    ],
+    [
+      "Based on your understanding of the sentiment in this text: \"<text>\", identify the most appropriate word(s) from <options>."
+    ],
+    [
+      "What emotions are present in the the following text:\n\n\"<text>\"\n\nPlease choose from the following <options>."
+    ],
+    [
+      "Identify the dominant emotion conveyed in the phrase \"<text>\". Your options are <options>."
+    ],
+    [
+      "Based on the given emotion set <options>, select the one that best fits the expression of \"<text>\"."
+    ],
+    [
+      "Which category does the phrase \"<text>\" belong to? Choose from the following options:\n <options>"
+    ],
+    [
+      "Identify the tone of the given text: \"<text>\". Is it <options>?"
+    ],
+    [
+      "Can you determine the emotion displayed in the given sentence \"<text>\"? Choose one of the following: <options>."
+    ],
+    [
+      "Identify the sentiment expressed in the sentence \"<text>\". Please choose from the following options: <options>."
+    ],
+    [
+      "Label the emotion conveyed in the sentence \"<text>\" using the options provided: <options>."
+    ],
+    [
+      "Choose the correct emotion from the following options <options> for the given phrase \" <text>\"."
+    ],
+    [
+      "Identify whether the sentiment of the following text is positive, negative, or natural:\n<text>\nChoose from the following options: <options>"
+    ],
+    [
+      "What is the emotion being expressed in the sentence \"<text>\"?\nRefer to the following options and choose the most appropriate one:\n<options>"
+    ],
+    [
+      "Please review the sentiment of the given text and indicate whether it is favorable, unfavorable or neutral:\n<text>\nChoose from the following options: <options>"
+    ]
+  ],
+  "OPENIE": [
+    [
+        "Open information extraction requires the extraction of all relations in the sentence, i.e., predicates, the subjects and objects corresponding to these relations, and the possible time and place thesis elements. Please extract all the relational tuples in the following sentence: <text>. If there are no relations in the text, please answer \"NA\".",
+        "NA"
+    ],
+    [
+        "Open Information Extraction (OpenIE) aims to extract n-ary knowledge tuples {(a1, p, a2, ..., an)} consisting of n arguments and one predicate from the natural text in a domain-independent manner. Please extract all the relational tuples in the following sentence, i.e., predicates, the subjects and objects corresponding to these relations, and the possible time and place thesis elements. Text: <text>. There may be no tuples in the text, if not, output \"No tuples\".",
+        "No tuples."
+    ],
+    [
+        "To perform open information extraction effectively, one must identify and extract all relations within the sentence. This includes recognizing predicates, determining subjects and objects linked to these relations, and identifying potential temporal and spatial elements. Can you help me extract possible relation tuples from the Text: <text> ? If there is no answer, answer \"There are no possible relational tuples.\".",
+        "There are no possible relational tuples."
+    ],
+    [
+        "Could you perform Open Information Extraction on the provided text? Your task is to extract all the relational tuples from the text, including predicates, subjects, objects, and any associated time and location elements. Text: <text>. If there are no tuples present in the text, please output \"No tuples\".",
+        "No tuples."
+    ],
+    [
+        "In the realm of Open Information Extraction, the objective is to uncover relational tuples from natural language text, encapsulating subjects, predicates, objects, as well as potential temporal and spatial attributes. Could you delve into the provided text and extract any relational tuples? If no tuples exist, kindly respond with 'No tuples found.'",
+        "No tuples found."
+    ],
+    [
+        "Engage in the process of Open Information Extraction by identifying and extracting relational tuples from the specified text. These tuples should include subjects, predicates, objects, and, if applicable, any time or location information. If the text does not contain any relational tuples, please indicate by stating 'No tuples found.'",
+        "No tuples found."
+    ],
+    [
+        "Your mission is to dissect the given text and extract any relational tuples it may contain, focusing on the subjects, predicates, objects, and noting any temporal or spatial details present. If the text lacks relational tuples, simply report back with 'No relational tuples identified.'",
+        "No relational tuples identified."
+    ],
+    [
+        "Dive into the provided text and unearth any relational tuples, paying close attention to subjects, predicates, objects, and any elements of time or location. Should the text be devoid of such tuples, kindly report 'No tuples to report.'",
+        "No tuples to report."
+    ],
+    [
+        "In the task of Open Information Extraction, your goal is to dissect the given text to unearth the underlying relationships. This involves pinpointing the subjects, predicates, and objects, as well as noting any relevant temporal or spatial details. Should the text lack relational tuples, kindly respond with 'No relationships identified.'",
+        "No relationships identified."
+    ],
+    [
+        "Dive into the Open Information Extraction task by extracting relational tuples from the provided text, which include subjects, predicates, objects, and possibly, time and location details. If no relational tuples are present, simply state 'Relationships not found.'",
+        "Relationships not found."
+    ],
+    [
+        "Your task in Open Information Extraction is to analyze the text and extract the relational tuples it contains, focusing on subjects, predicates, objects, and any identifiable temporal or spatial information. If the text does not yield any relational tuples, please reply with 'Extracted tuples not available.'",
+        "Extracted tuples not available."
+    ],
+    [
+        " In the task of Open Information Extraction, your objective is to sift through the provided text and distill the essential relational tuples it harbors. These tuples should encapsulate subjects, predicates, objects, and when discernible, elements of time and location. Should the text prove barren of such tuples, kindly respond with 'Tuples cannot be extracted.'",
+        "Tuples cannot be extracted."
+    ],
+    [
+        "Your mission in Open Information Extraction is to delve into the provided text and unearth the relational tuples it conceals. These tuples are to include subjects, predicates, objects, and, where applicable, any temporal or spatial markers. In the event that the text is devoid of such tuples, please report back with 'Unable to extract tuples.'",
+        "Unable to extract tuples."
+    ],
+    [
+        "The essence of Open Information Extraction involves parsing the given text to identify and extract relational tuples, which include subjects, predicates, objects, and potentially, temporal and spatial information. If no such tuples are present in the text, your response should be 'Extraction of tuples is not possible.'",
+        "Extraction of tuples is not possible."
+    ],
+    [
+        "In the realm of Open Information Extraction, your task is to parse the provided text and identify any relational tuples it contains. These should include subjects, predicates, objects, and when present, any temporal or spatial information. Should the text not contain any identifiable tuples, your response should be 'Tuples not found.'",
+        "Tuples not found."
+    ],
+    [
+        " Your objective in this Open Information Extraction task is to scrutinize the text and extract relational tuples, focusing on subjects, predicates, objects, and noting any relevant temporal or spatial contexts. If the text does not yield any tuples, your report should state 'No identifiable tuples.'",
+        "No identifiable tuples."
+    ],
+    [
+        "Dive into the text provided and extract any relational tuples, paying close attention to subjects, predicates, objects, and any temporal or spatial details. If no tuples can be extracted, please respond with 'Extraction failed.'",
+        "Extraction failed."
+    ]
+  ]
+}
