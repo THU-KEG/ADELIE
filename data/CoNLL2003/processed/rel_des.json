@@ -1,0 +1,18 @@
+{
+    "Person": [
+        "PER",
+        "person"
+    ],
+    "Organization": [
+        "ORG",
+        "organization"
+    ],
+    "Location": [
+        "LOC",
+        "location"
+    ],
+    "Miscellaneous": [
+        "MISC",
+        "name of miscellaneous"
+    ]
+}

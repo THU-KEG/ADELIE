@@ -526,7 +526,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--input_dir",
         type=str,
-        default="../../../data/Named_Entity_Recognition/ace2005-en/processed",
+        default="../../../data/ace2005-en/processed",
     )
     parser.add_argument(
         "--output_dir", type=str, default="../../../unified_data/ace2005-ner"

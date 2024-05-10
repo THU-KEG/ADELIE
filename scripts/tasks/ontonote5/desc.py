@@ -1,3 +1,5 @@
+# This code modified from: https://github.com/hitz-zentroa/GoLLIE/tree/main/src/tasks/ontonotes
+
 OPTIONS = {
     "PERSON": ("Person", "People, including fictional."),
     "NORP": ("NORP", "Nationalities or religious or political groups."),

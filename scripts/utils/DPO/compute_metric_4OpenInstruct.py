@@ -5,35 +5,21 @@ import jsonlines
 from tqdm import tqdm
 import random
 from pathlib import Path
+import evaluate
+import argparse
 
 
-def create_prompt_with_tulu_chat_format(messages, bos="<s>", eos="</s>", add_bos=False):
-    formatted_text = ""
-    for i, message in enumerate(messages):
-        if message["role"] == "system":
-            formatted_text += "<|system|>\n" + message["content"] + "\n"
-        elif message["role"] == "user":
-            formatted_text += "<|user|>\n" + message["content"] + "\n"
-        elif message["role"] == "assistant":
-            formatted_text += (
-                "<|assistant|>\n" + message["content"].strip() + eos + "\n"
-            )
-        else:
-            raise ValueError(
-                "Tulu chat template only supports 'system', 'user' and 'assistant' roles. Invalid role: {}.".format(
-                    message["role"]
-                )
-            )
-    formatted_text += "<|assistant|>\n"
-    formatted_text = bos + formatted_text if add_bos else formatted_text
-    return formatted_text
+def get_score(pred, gold, metric):
+    return metric.compute(predictions=pred, references=gold)["rougeLsum"]
 
 
-def GenerateDPOunifiedData_4OpenInstructs():
-    trainInf_file = "/data1/qyj/Alignment_on_IE_tasks/open-instruct/results/llama-base-7b/full/v20/mix_vDPO.jsonl"
-    out_bleu_file = "/data1/qyj/Alignment_on_IE_tasks/open-instruct/results/llama-base-7b/full/v20/mix_vDPO_bleu.json"
-    out_dpo_file = "/data1/qyj/Alignment_on_IE_tasks/open-instruct/results/llama-base-7b/full/v20/mix_vDPO_4train.json"
+def GenerateDPOunifiedData_4OpenInstructs(path, metric):
+    trainInf_file = path + ".jsonl"
+    out_bleu_file = path + "_" + metric + ".json"
+    out_dpo_file = path + "_" + metric + "_4train.json"
     Limit_DPO_data = 50000
+    if metric == "rough-l":
+        metric_evaluate = evaluate.load("rouge")
 
     infdata = []
     with open(trainInf_file, "r", encoding="utf-8") as reader:
@@ -45,37 +31,61 @@ def GenerateDPOunifiedData_4OpenInstructs():
     sum_bleu = 0
     for i, instance in enumerate(infdata):
         gold_text = instance["messages"][-1]["content"].split("[Answer]: ")[1]
+        infdata[i]["metric"] = metric
         try:
             pre_text = instance["output"].split("[Answer]: ")[1]
+            if metric == "bleu":
+                bleu_score = sentence_bleu(
+                    [list(gold_text)],
+                    list(pre_text),
+                    smoothing_function=SmoothingFunction().method3,
+                )
+                infdata[i]["score"] = bleu_score
+            elif metric == "rough-l":
+                print("================")
+                print("pre_text:", pre_text)
+                print("gold_text:", gold_text)
+                cur_score = get_score([pre_text], [gold_text], metric_evaluate)
+                infdata[i]["score"] = cur_score
+                print("cur_score:", cur_score)
+            else:
+                print("No metric")
+            sum_bleu += infdata[i]["score"]
         except:
             # prediction的时候失序，出现了过量重复的输出，怀疑可能是和cutoff有关
             # pre_text=instance["output"]
             # print(pre_text)
-            continue
-        bleu_score = sentence_bleu(
-            [list(gold_text)],
-            list(pre_text),
-            smoothing_function=SmoothingFunction().method3,
-        )
-        infdata[i]["bleu-4"] = bleu_score
-        bleudata.append(instance)
-        sum_bleu += bleu_score
-    bleudata.sort(key=lambda x: x["bleu-4"])  # 从小到大排序
+            # continue
+            infdata[i]["score"] = -1
 
-    out_file = open(out_bleu_file, "w", encoding="utf-8")
+        bleudata.append(instance)
+
+    out_file = open(path + "_" + metric + ".json", "w", encoding="utf-8")
+    json.dump(bleudata, out_file, indent=2)
+    out_file.close()
+
+    bleudata.sort(key=lambda x: x["score"])  # 从小到大排序
+
+    out_file = open(path + "_" + metric + "_sorted.json", "w", encoding="utf-8")
     json.dump(bleudata, out_file, indent=2)
     out_file.close()
 
     sum_bleu = sum_bleu / len(bleudata)
-    print("avg_bleu:", sum_bleu)
+    print("avg_score:", sum_bleu)
 
     count = {}
     unified_data = []
+    cnt = -1
     for i, instance in enumerate(bleudata):
-        if i >= Limit_DPO_data:
+        if instance["score"] == -1:
+            continue
+        cnt += 1
+        if cnt >= Limit_DPO_data:
             break
-        if instance["bleu-4"] == 1:
-            print("Now is Bleu-4 = 1:", i)
+        # if instance["dataset"]=="ondemand":
+        #     continue
+        if instance["score"] >= 1:
+            print("Now is score >= 1.0:", i)
             break
         instance["chosen"] = instance["messages"]
         instance["rejected"] = instance["messages"][:-1]
@@ -83,6 +93,11 @@ def GenerateDPOunifiedData_4OpenInstructs():
         instance["rejected"].append(reject_output)
         if instance["dataset"] not in count:
             count[instance["dataset"]] = 0
+            count[instance["dataset"] + "_avg_delta"] = 0
+        count[instance["dataset"] + "_avg_delta"] = (
+            (count[instance["dataset"] + "_avg_delta"] * count[instance["dataset"]])
+            + (1 - instance["score"])
+        ) / (count[instance["dataset"]] + 1)
         count[instance["dataset"]] += 1
         unified_data.append(instance)
     print(count)
@@ -91,10 +106,18 @@ def GenerateDPOunifiedData_4OpenInstructs():
     json.dump(unified_data, out_file, indent=2)
     out_file.close()
 
-    out_file = open("info.txt", "w", encoding="utf-8")  ###########################
+    count["total"] = len(unified_data)
+    out_file = open(
+        "info_t_1.0.txt", "w", encoding="utf-8"
+    )  ###########################
     json.dump(count, out_file, indent=2)
     out_file.close()
 
 
 if __name__ == "__main__":
-    GenerateDPOunifiedData_4OpenInstructs()
+    parser = argparse.ArgumentParser(description="mixture")
+    parser.add_argument("--input_path", type=str)
+    args = parser.parse_args()
+    path = args.input_path
+    GenerateDPOunifiedData_4OpenInstructs(path, "bleu")  # bleu rough-l
+    # test()

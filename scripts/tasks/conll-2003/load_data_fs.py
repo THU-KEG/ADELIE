@@ -329,7 +329,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--input_dir",
         type=str,
-        default="../../../data/Named_Entity_Recognition/CoNLL2003/processed",
+        default="../../../data/CoNLL2003/processed",
     )
     parser.add_argument(
         "--output_dir", type=str, default="../../../unified_data/conll-2003"

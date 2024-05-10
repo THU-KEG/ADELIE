@@ -9,7 +9,7 @@ parser = argparse.ArgumentParser(description="Query OpenAI")
 parser.add_argument(
     "--output_file",
     type=str,
-    default="/data1/qyj/Alignment_on_IE_tasks/open-instruct/saves/llama_v2_7B/full/rate_0.2_plus_2.dpo_0.5_3f_0.1/predict/fewshot/MATRES.jsonl",
+    default="/SSD_DATA/qyj/open-instruct-main/saves/llama_v2_7B/full/no_output_desc/predict/zeroshot/MATRES.jsonl",
 )  # fewshot_test_history_3
 args = parser.parse_args()
 

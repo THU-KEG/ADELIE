@@ -127,7 +127,7 @@ if __name__ == "__main__":
         "--pred_file",
         "-pred",
         type=str,
-        default="result_llama_rate_0.2_plus_2_(2.json",
+        default="result.json",
         help="The predicted json file with the unified ROBUST format.",
     )
     parser.add_argument(

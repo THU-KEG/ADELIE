@@ -1,3 +1,5 @@
+# This code modified from: https://github.com/hitz-zentroa/GoLLIE/tree/main/src/tasks/ontonotes
+
 from typing import List
 
 
@@ -15,7 +17,9 @@ def to_iob_encoding(tags: List[str]) -> List[str]:
             try:
                 b, t = tag.split("-")
             except ValueError:
-                raise ValueError(f"Error tag {tag}, unable to split the tag in 2 fields.")
+                raise ValueError(
+                    f"Error tag {tag}, unable to split the tag in 2 fields."
+                )
             if (b == "B" or b == "U") and prev_tag_b != "O" and prev_tag_t == t:
                 tags[i] = f"B-{t}"
             else:
@@ -40,9 +44,13 @@ def to_iob2_encoding(tags: List[str]) -> List[str]:
             try:
                 b, t = tag.split("-")
             except ValueError:
-                raise ValueError(f"Error tag {tag}, unable to split the tag in 2 fields.")
+                raise ValueError(
+                    f"Error tag {tag}, unable to split the tag in 2 fields."
+                )
 
-            if (b == "B" or b == "U") or ((prev_tag_b == "O") or (prev_tag_t != "" and prev_tag_t != t)):
+            if (b == "B" or b == "U") or (
+                (prev_tag_b == "O") or (prev_tag_t != "" and prev_tag_t != t)
+            ):
                 tags[i] = f"B-{t}"
             else:
                 tags[i] = f"I-{t}"
@@ -64,7 +72,9 @@ def to_bilou_encoding(tags: List[str]) -> List[str]:
                 try:
                     prev_b, prev_t = prev_word_tag_tmp.split("-")
                 except ValueError:
-                    raise ValueError(f"Error in tag {prev_word_tag_tmp}, unable to split the tag in 2 fields.")
+                    raise ValueError(
+                        f"Error in tag {prev_word_tag_tmp}, unable to split the tag in 2 fields."
+                    )
 
                 if prev_b == "B":
                     tags[i - 1] = f"U-{prev_t}"
@@ -77,7 +87,9 @@ def to_bilou_encoding(tags: List[str]) -> List[str]:
             try:
                 b, t = tag.split("-")
             except ValueError:
-                raise ValueError(f"Error in tag {prev_word_tag_tmp}, unable to split the tag in 2 fields.")
+                raise ValueError(
+                    f"Error in tag {prev_word_tag_tmp}, unable to split the tag in 2 fields."
+                )
 
             if prev_word_tag_tmp == "":
                 if b == "U":
@@ -89,7 +101,9 @@ def to_bilou_encoding(tags: List[str]) -> List[str]:
                 try:
                     prev_b, prev_t = prev_word_tag_tmp.split("-")
                 except ValueError:
-                    raise ValueError(f"Error in tag {prev_word_tag_tmp}, unable to split the tag in 2 fields.")
+                    raise ValueError(
+                        f"Error in tag {prev_word_tag_tmp}, unable to split the tag in 2 fields."
+                    )
 
                 if b == "U":
                     if prev_b == "B":
@@ -127,7 +141,9 @@ def to_bilou_encoding(tags: List[str]) -> List[str]:
         try:
             prev_b, prev_t = prev_word_tag_tmp.split("-")
         except ValueError:
-            raise ValueError(f"Error in tag {prev_word_tag_tmp}, unable to split the tag in 2 fields.")
+            raise ValueError(
+                f"Error in tag {prev_word_tag_tmp}, unable to split the tag in 2 fields."
+            )
 
         if prev_b == "B":
             tags[-1] = f"U-{prev_t}"
@@ -145,4 +161,6 @@ def rewrite_labels(labels, encoding: str = "iob2") -> List[str]:
     elif encoding.lower() == "bilou":
         return to_bilou_encoding(labels)
     else:
-        raise NotImplementedError(f"Encoding {encoding} not supported. Supported encodings [IOB,IOB2,BILOU]")
+        raise NotImplementedError(
+            f"Encoding {encoding} not supported. Supported encodings [IOB,IOB2,BILOU]"
+        )

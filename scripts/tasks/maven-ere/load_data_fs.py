@@ -726,7 +726,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--input_dir",
         type=str,
-        default="../../../data/Event_Relation_Extraction/MAVEN-ERE",
+        default="../../../data/MAVEN-ERE",
     )
     parser.add_argument(
         "--output_dir", type=str, default="../../../unified_data/MAVEN-ERE-MoreDoc"

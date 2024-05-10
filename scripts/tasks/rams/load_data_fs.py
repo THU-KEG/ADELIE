@@ -358,9 +358,7 @@ def construct_response(input_folder, output_folder, inst_file, split, config):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="RAMS-eae")
     # I/O
-    parser.add_argument(
-        "--input_dir", type=str, default="../../../data/Event_Extraction/RAMS_1.0c/data"
-    )
+    parser.add_argument("--input_dir", type=str, default="../../../data/RAMS_1.0c/data")
     parser.add_argument(
         "--output_dir", type=str, default="../../../unified_data/RAMS-eae"
     )

@@ -1,0 +1,3 @@
+Each line contains four fields: the word, its part-of-speech tag, its chunk tag and its named entity tag. 
+Words tagged with O are outside of named entities and the I-XXX tag is used for words inside a named entity of type XXX. Whenever two entities of type XXX are immediately next to each other, the first word of the second entity will be tagged B-XXX in order to show that it starts another entity. 
+The data contains entities of four types: persons (PER), organizations (ORG), locations (LOC) and miscellaneous names (MISC). 

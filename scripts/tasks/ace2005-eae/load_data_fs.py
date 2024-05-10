@@ -526,9 +526,7 @@ def construct_response(input_folder, output_folder, inst_file, split, config):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="ace2005-eae")
     # I/O
-    parser.add_argument(
-        "--input_dir", type=str, default="../../../data/Event_Extraction/ace2005-en"
-    )
+    parser.add_argument("--input_dir", type=str, default="../../../data/ace2005-en")
     parser.add_argument(
         "--output_dir", type=str, default="../../../unified_data/ace2005-eae"
     )
@@ -594,6 +592,5 @@ if __name__ == "__main__":
 
     output_folder.mkdir(exist_ok=True, parents=True)
 
-    # config在内部修改后，在外部也会修改，所以先跑train！
     construct_response(input_folder, output_folder, inst_file, "train", config)
     # construct_response(input_folder, output_folder, inst_file, "test", config)

@@ -588,9 +588,7 @@ def construct_response(input_folder, output_folder, inst_file, split, config):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="ace2005-eae")
     # I/O
-    parser.add_argument(
-        "--input_dir", type=str, default="../../../data/Event_Extraction/MAVEN-Arg"
-    )
+    parser.add_argument("--input_dir", type=str, default="../../../data/MAVEN-Arg")
     parser.add_argument(
         "--output_dir", type=str, default="../../../unified_data_test/maven-eae"
     )

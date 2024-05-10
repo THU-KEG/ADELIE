@@ -22,14 +22,12 @@ python tasks/ace2005-ner/load_data_fs.py \
 
 
 python tasks/ontonote5/load_data_fs.py \
-    --input_dir  ../data/Named_Entity_Recognition/ontonote5\
+    --input_dir  ../data/Named_Entity_Recognition/ontonote5 \
     --output_dir ../unified_data/ontonote5 \
     --instruction_file tasks/instructions.json \
     --infFormat_rate 0.8 \
     --json_rate 0.05 \
     --explain_rate 0.1 \
-    
-
 
 
 # #=============== RC ===============
@@ -126,6 +124,19 @@ python tasks/maven-ere/load_data_fs.py \
     
 
 
+# #=============== Open ie ================
+
+python tasks/openie4/load_data_fs.py \
+    --input_dir  ../data/openie6 \
+    --output_dir ../unified_data/openie4 \
+    --instruction_file tasks/instructions.json \
+    --infFormat_rate 0.8 \
+    --json_rate 0.05 \
+    --explain_rate 0.1 \
+
+# #=============== OndemandIE ================
+
+python tasks/ondemandie/load_data_fs.py 
 
 #================ Test Set ===================
 #================ NER ============

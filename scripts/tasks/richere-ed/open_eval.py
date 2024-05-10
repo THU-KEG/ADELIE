@@ -108,7 +108,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--input_dir",
         type=str,
-        default="/data1/qyj/Alignment_on_IE_tasks/open-instruct/saves/llama_v2_7B/full/rate_0.2_plus_2.dpo_0.5_3f_0.1/predict/fewshot/RichERE-ed.jsonl",
+        default="/SSD_DATA/qyj/open-instruct-main/saves/llama_v2_7B/full/no_output_desc/predict/zeroshot/RichERE-ed.jsonl",
     )
     parser.add_argument("--output_dir", type=str, default="result.json")
 

@@ -10,7 +10,7 @@ python utils/reformat_tuluv2.py
 python tasks/ondemandie/load_data_fs.py
 
 
-#生成 IEInstruct 数据
+#生成 IEInstruct 数据, output_path: /ADELIE/unified_data/train_mixture
 python utils/mixture_task_fs_tuluformat.py \
     --unified_data_dir ../unified_data \
     --hold_in_datasets conll-2003 ace2005-ner ontonote5 fewrel tacred ace2005-ed maven-ed ace2005-eae RAMS-eae MAVEN-ERE maven-eae ee other_ner other_rc re openie4\
@@ -20,7 +20,7 @@ python utils/mixture_task_fs_tuluformat.py \
     --Limit_total_data 400000 \
     --General_rate 0.8 \
     --Limit_dataset 5000 \
-    --version "rate_0.2_plus" \
+    --version "IEInstruct" \
     --general_filter 0 \
     --reserve_all_gptdata 0
 
