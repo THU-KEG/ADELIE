@@ -17,6 +17,12 @@ We introduce <b>ADELIE</b> (<b>A</b>ligning large language mo<b>DEL</b>s on <b>I
 <img src="assets/Figure1.jpg" width="70%">
 </p>
 
+## News
+- [2024-11-4] To facilitate deployment, we further trained **Qwen2.5-1.5B** (ADELIE-SFT-1.5B and ADELIE-DPO-1.5B) and **Llama3.2-3B** (ADELIE-SFT-3B and ADELIE-DPO-3B). The models are now available on the [HF repository](https://huggingface.co/collections/THU-KEG/adelie-663dba43d21837e0cd21ffef).
+- [2024-9-20] Our paper has been accepted by the **EMNLP 2024 main conference**!
+- [2024-05-06] Initial release of the codebase containing the data constructing and training code for our [arxiv paper](https://arxiv.org/abs/2405.05008).
+
+
 ## An inference example
 <p align="center">
 <img src="assets/inference.png" width="100%">
@@ -26,16 +32,23 @@ We introduce <b>ADELIE</b> (<b>A</b>ligning large language mo<b>DEL</b>s on <b>I
 The code repository is based on Pytorch and Transformers. Please use the following command to install the necessary dependcies. ``pip install -r requirements.txt.``
 
 ## Pretrained models
-We release three ADELIE models based on [LLama-2](hhttps://huggingface.co/docs/transformers/main/model_doc/llama2) (7B). The models are available in the 🤗HuggingFace Hub.
+We release three ADELIE models based on [LLama-2](https://huggingface.co/docs/transformers/main/model_doc/llama2) (7B), [Llama-3.2](https://huggingface.co/meta-llama/Llama-3.2-3B) (3B) and [Qwen2.5](https://huggingface.co/Qwen/Qwen2.5-1.5B) (1.5B). The models are available in the 🤗HuggingFace Hub.
 
-| Model |   IE Average F1 (%) | General Average Score (%) |                     🤗HuggingFace Hub                     |
-|---|:---------------------:|:--------------------:|:---------------------------------------------------------:|
-| ADELIE-SFT |         47.5          |         53.5        |  [ADELIE-SFT](https://huggingface.co/THU-KEG/ADELIE-SFT)  |
-| ADELIE-DPO |         <b>47.7</b>          |         <b>53.8</b>        |  [ADELIE-DPO](https://huggingface.co/THU-KEG/ADELIE-DPO)  |
+The table below presents the average F1 scores (%) of the ADELIE model across closed IE, open IE, and on-demand IE tasks, as well as its overall performance (%) on general benchmarks. For dataset details, please refer to the paper.
 
-
-<!-- ## How to use ADELIE
-Please take a look at our Example Jupyter Notebooks for instructions on ADELIE usage. -->
+| Model           | Closed IE | Open IE | On-demand IE | General Average Score |
+|-----------------|-----------|---------|--------------|-----------------------|
+| Llama2 7B       | 5.7       | 5.6     | 22.4         | 52.2                  |
+| ADELIE-SFT      | 42.6      | 46.9    | 60.4         | 53.5                  |
+| ADELIE-DPO      | **42.7**      | **47.6**    | **60.5**         | **53.8**                  |
+|-----------------|-----------|---------|--------------|-----------------------|
+| Llama3.2 3B     | 19.1      | 18.5    | 20.8         | 55.5                  |
+| ADELIE-SFT-3B   | **41.8**      | 47.6    | **60.8**         | **55.6**                  |
+| ADELIE-DPO-3B   | 39.2      | **47.8**    | 60.7         | **55.6**                  |
+|-----------------|-----------|---------|--------------|-----------------------|
+| Qwen2.5 1.5B    | 16.5      | 14.2    | 20.5         | 54.6                  |
+| ADELIE-SFT-1.5B | 37.7      | 44.6    | 58.9         | 55.0                  |
+| ADELIE-DPO-1.5B | **38.5**      | **45.6**    | **59.2**         | **55.1**                  |
 
 ## Generate the ADELIE dataset
 
