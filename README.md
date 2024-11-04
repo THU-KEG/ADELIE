@@ -17,7 +17,7 @@ We introduce <b>ADELIE</b> (<b>A</b>ligning large language mo<b>DEL</b>s on <b>I
 <img src="assets/Figure1.jpg" width="70%">
 </p>
 
-## News
+## News❗️❗️❗️
 - [2024-11-4] To facilitate deployment, we further trained **Qwen2.5-1.5B** (ADELIE-SFT-1.5B and ADELIE-DPO-1.5B) and **Llama3.2-3B** (ADELIE-SFT-3B and ADELIE-DPO-3B). The models are now available on the [HF repository](https://huggingface.co/collections/THU-KEG/adelie-663dba43d21837e0cd21ffef).
 - [2024-9-20] Our paper has been accepted by the **EMNLP 2024 main conference**!
 - [2024-05-06] Initial release of the codebase containing the data constructing and training code for our [arxiv paper](https://arxiv.org/abs/2405.05008).
